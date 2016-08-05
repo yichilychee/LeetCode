@@ -1,0 +1,21 @@
+Total Accepted: 64598
+Total Submissions: 110160
+Difficulty: Easy
+Write a function that takes a string as input and returns the string reversed.
+
+Example:
+Given s = "hello", return "olleh".
+
+
+
+class Solution(object):
+    def reverseString(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        if not s: return ""
+        s=list(s)
+        for i in range(0,int(len(s)/2)):
+            s[len(s)-1-i],s[i]=s[i],s[len(s)-1-i]
+        return "".join(s)
